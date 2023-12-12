@@ -1,0 +1,50 @@
+body{
+	background-color:rgba(134, 116, 95, 0.596);
+	background-image: url('coffee.png');
+	background-attachment: fixed;
+	
+	
+}
+h1{
+	background-color: rgb(136, 92, 67);
+	box-shadow: 0 0 30px;
+	outline: solid 5PX white;
+	
+	border-radius: 20px;
+	
+	width: 1410px;
+    padding: 10px;
+	font-size: 100px;
+	
+	margin-left: 270px;
+	
+	color: rgb(247, 247, 247);
+}
+label {
+    font-size: 25px;
+	box-shadow: 0 0 10px;
+	margin-left: 160px;
+	background-color: rgb(182, 125, 107);
+	
+
+
+}
+input{
+	background-color: rgb(247, 243, 238);
+	height: 45px;
+	box-shadow: 0 0 10px;
+}
+#receipt{
+	background-color: rgb(165, 125, 92);
+	width: 800px;
+	margin-top: 90px;
+	margin-left: 550px;
+	border-radius: 20px;
+	box-shadow: 0 0 10px;
+	outline: solid 1px rgb(182, 141, 141);
+	text-align: center;
+	
+	font-size: 30px;
+	bottom: 1100px;
+	color: rgb(255, 250, 250);
+}

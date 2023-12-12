@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="style1.css">
+    <title>COFFEE LAB</title>
+   
+    
+</head>
+<body>
+     
+
+    <h1>WELCOME TO COFFEE LAB!</h1>
+
+    <label for="regular">Regular Coffee Bags:</label>
+    <input type="number" id="regular" placeholder="Enter quantity">
+
+    <label for="decaf">Decaf Coffee Bags:</label>
+    <input type="number" id="decaf" placeholder="Enter quantity">
+
+    <label for="mocha">Mocha Coffee Bags:</label>
+    <input type="number" id="mocha" placeholder="Enter quantity">
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+    <div id="receipt"></div>
+
+    <script>
+        function calculateTotal() {
+            const regular_bags = document.getElementById('regular').value;
+            const decaf_bags = document.getElementById('decaf').value;
+            const mocha_bags = document.getElementById('mocha').value;
+
+            const regular_price = 500;
+            const decaf_price = 400;
+            const mocha_price = 555;
+
+            const regular_total = regular_bags * regular_price;
+            const decaf_total = decaf_bags * decaf_price;
+            const mocha_total = mocha_bags * mocha_price;
+
+            let total_cost = regular_total + decaf_total + mocha_total;
+
+            // Apply discount if total is over Php1000
+            if (total_cost > 1000) {
+                total_cost -= 250;
+            }
+
+            // Display receipt on the webpage
+            const receiptElement = document.getElementById('receipt');
+            receiptElement.innerHTML = `<p>You purchased ${regular_bags} bags of regular coffee, total Php${regular_total}.</p>
+                                        <p>You purchased ${decaf_bags} bags of decaf coffee, total Php${decaf_total}.</p>
+                                        <p>You purchased ${mocha_bags} bags of mocha coffee, total Php${mocha_total}.</p>
+                                        <p>Your total purchase cost is Php${total_cost}.</p>`;
+        }
+    </script>
+</body>
+</html>
